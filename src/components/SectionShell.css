@@ -1,0 +1,23 @@
+.section-shell {
+  padding: var(--space-6) 0;
+}
+
+.section-shell:nth-of-type(even) {
+  background: var(--color-surface);
+}
+
+.section-shell__container {
+  width: min(var(--max-width), 92%);
+  margin: 0 auto;
+}
+
+.section-shell__header h2 {
+  margin: 0 0 var(--space-2);
+  color: var(--color-primary);
+  font-size: clamp(1.5rem, 4.4vw, 2.3rem);
+}
+
+.section-shell__header p {
+  margin: 0;
+  max-width: 70ch;
+}
