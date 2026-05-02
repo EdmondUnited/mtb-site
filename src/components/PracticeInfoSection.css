@@ -1,0 +1,29 @@
+.practice-info__list {
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.practice-info__list li {
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.practice-info__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 999px;
+  background: var(--color-accent-blue);
+}
+
+@media (min-width: 768px) {
+  .practice-info__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

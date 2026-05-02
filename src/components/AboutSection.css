@@ -1,0 +1,9 @@
+.about-section__text {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.about-section__text p {
+  margin: 0;
+}
