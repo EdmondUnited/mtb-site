@@ -26,7 +26,7 @@ const siteContent = {
       "A youth mountain bike team building confidence, skills, and community on every trail.",
     ctaLabel: "Join Our Team",
     ctaHref: "#contact",
-    image: "public/images/Lily_racing_SCIP.jpg",
+    image: "public/images/hero_image.jpg",
     imageAlt: "Youth mountain bike riders on a forest trail"
   },
   about: {
@@ -74,26 +74,33 @@ const siteContent = {
       "Our coach group includes trained volunteer coaches and parent coaches committed to rider growth and safety.",
     members: [
       {
-        name: "Coach Anna",
+        name: "Coach Graham",
         role: "Head Coach",
         type: "Volunteer Coach",
-        image: "/images/coach-anna.svg",
-        imageAlt: "Portrait illustration of Coach Anna"
+        image: "/images/coach-graham.svg",
+        imageAlt: "Portrait of Coach Graham"
       },
       {
-        name: "Coach Miguel",
+        name: "Coach Matt",
+        role: "Team Director",
+        type: "Parent Coach",
+        image: "/images/coach-matt.svg",
+        imageAlt: "Portrait of Coach Matt"
+      },
+      {
+        name: "Coach John",
         role: "Skills Coach",
         type: "Parent Coach",
-        image: "/images/coach-miguel.svg",
-        imageAlt: "Portrait illustration of Coach Miguel"
+        image: "/images/coach-john.svg",
+        imageAlt: "Portrait of Coach John"
       },
-      {
-        name: "Coach Jordan",
-        role: "Ride Group Coach",
-        type: "Parent Coach",
-        image: "/images/coach-jordan.svg",
-        imageAlt: "Portrait illustration of Coach Jordan"
-      }
+      // {
+      //   name: "Coach Steph",
+      //   role: "GRiT Coordinator/Coach",
+      //   type: "Parent Coach",
+      //   image: "/images/coach-steph.svg",
+      //   imageAlt: "Portrait of Coach Steph"
+      // }
     ]
   },
   faq: {
