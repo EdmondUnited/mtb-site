@@ -26,7 +26,7 @@ const siteContent = {
       "A youth mountain bike team building confidence, skills, and community on every trail.",
     ctaLabel: "Join Our Team",
     ctaHref: "#contact",
-    image: "public/images/hero_image.jpg",
+    image: "./images/hero_image.jpg",
     imageAlt: "Youth mountain bike riders on a forest trail"
   },
   about: {
