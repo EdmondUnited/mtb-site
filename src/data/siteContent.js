@@ -27,7 +27,7 @@ const siteContent = {
     ctaLabel: "Join Our Team",
     ctaHref: "#contact",
     image: "./images/hero_image.jpg",
-    imageAlt: "Youth mountain bike riders on a forest trail"
+    imageAlt: "Youth mountain bike riders in a race"
   },
   about: {
     id: "about",
