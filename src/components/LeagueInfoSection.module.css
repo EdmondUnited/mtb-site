@@ -1,0 +1,12 @@
+.league > div > div {
+  margin-top: var(--space-4);
+  display: flex;
+  justify-content: center;
+}
+
+.league iframe {
+  display: block;
+  width: min(100%, 900px);
+  aspect-ratio: 16 / 9;
+  border: 0;
+}

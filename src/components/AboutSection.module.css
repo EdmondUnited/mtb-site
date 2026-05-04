@@ -1,9 +1,9 @@
-.about-section__text {
+.about > div > div {
   display: grid;
   gap: var(--space-3);
   margin-top: var(--space-4);
 }
 
-.about-section__text p {
+.about > div > div p {
   margin: 0;
 }

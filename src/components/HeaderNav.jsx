@@ -1,14 +1,15 @@
-import "./HeaderNav.css";
+import styles from "./HeaderNav.module.css";
 
 function HeaderNav({ teamName, links }) {
   return (
-    <header className="header-nav">
-      <div className="header-nav__inner">
-        <a className="header-nav__brand" href="#top">
+    <header className={styles.header}>
+      <div>
+        <img src="./images/edmond_logo.png" width="100"></img>
+        <a href="#top">
           {teamName}
         </a>
         <nav aria-label="Primary">
-          <ul className="header-nav__list">
+          <ul>
             {links.map((link) => (
               <li key={link.href}>
                 <a href={link.href}>{link.label}</a>

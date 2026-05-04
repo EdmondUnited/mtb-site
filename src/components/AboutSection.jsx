@@ -1,10 +1,10 @@
 import SectionShell from "./SectionShell";
-import "./AboutSection.css";
+import styles from "./AboutSection.module.css";
 
 function AboutSection({ about }) {
   return (
-    <SectionShell id={about.id} title={about.title}>
-      <div className="about-section__text">
+    <SectionShell id={about.id} title={about.title} className={styles.about}>
+      <div>
         {about.text.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}

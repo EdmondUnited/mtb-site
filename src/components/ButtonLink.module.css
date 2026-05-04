@@ -1,4 +1,4 @@
-.btn-link {
+.button {
   display: inline-block;
   background: var(--color-accent-gold);
   color: #232620;
@@ -9,8 +9,8 @@
   transition: transform 0.18s ease, background 0.18s ease;
 }
 
-.btn-link:hover,
-.btn-link:focus-visible {
+.button:hover,
+.button:focus-visible {
   transform: translateY(-1px);
   background: #f4c468;
   outline: 2px solid #1f2a1f;
