@@ -9,6 +9,7 @@ import PracticeInfoSection from "./components/PracticeInfoSection";
 import RiderNeedsSection from "./components/RiderNeedsSection";
 import WhoCanJoinSection from "./components/WhoCanJoinSection";
 import siteContent from "./data/siteContent";
+import LeagueInfoSection from "./components/LeagueInfoSection";
 
 function App() {
   useEffect(() => {
@@ -24,15 +25,14 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+    <div>
       <HeaderNav teamName={siteContent.meta.teamName} links={siteContent.nav} />
       <main>
         <HeroSection hero={siteContent.hero} location={siteContent.meta.location} />
         <AboutSection about={siteContent.about} />
+        <LeagueInfoSection league={siteContent.league}/>
         <PracticeInfoSection practice={siteContent.practice} />
-        <WhoCanJoinSection join={siteContent.join} />
-        <RiderNeedsSection needs={siteContent.needs} />
-        <CoachesSection coaches={siteContent.coaches} />
+        {/* <CoachesSection coaches={siteContent.coaches} /> */}
         <FAQSection faq={siteContent.faq} />
         <ContactCTASection contact={siteContent.contact} />
       </main>

@@ -1,0 +1,23 @@
+.practice ul {
+  margin-block: 1.5rem;
+  margin-inline: 1rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-3);
+  }
+
+.practice li {
+  position: relative;
+  list-style-type: circle;
+
+  &::marker {
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .practice ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

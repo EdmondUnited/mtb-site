@@ -1,15 +1,15 @@
-.hero-section {
+.hero {
   position: relative;
   min-height: 70vh;
 }
 
-.hero-section__image {
+.hero > img {
   width: 100%;
   min-height: 70vh;
   object-fit: cover;
 }
 
-.hero-section__overlay {
+.hero > div {
   position: absolute;
   inset: 0;
   display: flex;
@@ -22,14 +22,14 @@
   );
 }
 
-.hero-section__content {
+.hero > div > div {
   width: min(var(--max-width), 92%);
   margin: 0 auto;
   color: var(--color-white);
   padding: var(--space-5) 0;
 }
 
-.hero-section__eyebrow {
+.hero > div > div > p:first-of-type {
   margin: 0 0 var(--space-2);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -37,14 +37,14 @@
   font-size: 0.82rem;
 }
 
-.hero-section h1 {
+.hero h1 {
   margin: 0;
   font-size: clamp(2rem, 6.4vw, 4.2rem);
   line-height: 1.05;
   max-width: 12ch;
 }
 
-.hero-section p {
+.hero h1 + p {
   max-width: 48ch;
   margin: var(--space-3) 0 var(--space-4);
 }

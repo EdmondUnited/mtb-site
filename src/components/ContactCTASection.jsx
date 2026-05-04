@@ -1,6 +1,6 @@
 import ButtonLink from "./ButtonLink";
 import SectionShell from "./SectionShell";
-import "./ContactCTASection.css";
+import styles from "./ContactCTASection.module.css";
 
 function ContactCTASection({ contact }) {
   return (
@@ -8,9 +8,10 @@ function ContactCTASection({ contact }) {
       id={contact.id}
       title={contact.title}
       subtitle={contact.text}
-      className="contact-cta-section"
+      className={styles.section}
+      noAlternateBackground
     >
-      <div className="contact-cta-section__content">
+      <div>
         <ButtonLink href={contact.ctaHref}>{contact.ctaLabel}</ButtonLink>
         <p>{contact.supportText}</p>
       </div>

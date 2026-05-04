@@ -1,10 +1,10 @@
 import SectionShell from "./SectionShell";
-import "./RiderNeedsSection.css";
+import styles from "./RiderNeedsSection.module.css";
 
 function RiderNeedsSection({ needs }) {
   return (
-    <SectionShell id={needs.id} title={needs.title}>
-      <ul className="rider-needs__list">
+    <SectionShell id={needs.id} title={needs.title} className={styles.needs}>
+      <ul>
         {needs.items.map((item) => (
           <li key={item}>{item}</li>
         ))}

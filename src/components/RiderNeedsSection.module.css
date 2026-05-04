@@ -1,4 +1,4 @@
-.practice-info__list {
+.needs ul {
   margin: var(--space-4) 0 0;
   padding: 0;
   list-style: none;
@@ -6,12 +6,12 @@
   gap: var(--space-3);
 }
 
-.practice-info__list li {
+.needs li {
   position: relative;
   padding-left: 1.6rem;
 }
 
-.practice-info__list li::before {
+.needs li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -23,7 +23,7 @@
 }
 
 @media (min-width: 768px) {
-  .practice-info__list {
+  .needs ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
