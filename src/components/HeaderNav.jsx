@@ -1,10 +1,12 @@
 import styles from "./HeaderNav.module.css";
 
+const teamLogoSrc = `${import.meta.env.BASE_URL}images/edmond_logo.png`;
+
 function HeaderNav({ teamName, links }) {
   return (
     <header className={styles.header}>
       <div>
-        <img src="./images/edmond_logo.png" width="100"></img>
+        <img src={teamLogoSrc} width="100"></img>
         <a href="#top">
           {teamName}
         </a>
