@@ -15,8 +15,8 @@ const siteContent = {
   },
   nav: [
     { label: "About", href: "#about" },
+    { label: "League Info", href: "#leagueinfo" },
     { label: "Practices", href: "#practices" },
-    { label: "Join", href: "#join" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" }
   ],
@@ -26,8 +26,23 @@ const siteContent = {
       "A youth mountain bike team building confidence, skills, and community on every trail. A part of the Oklahoma Interscholastic Cycling League.",
     ctaLabel: "Join Our Team",
     ctaHref: "#contact",
-    image: "./images/hero_image.jpg",
-    imageAlt: "Youth mountain bike riders in a race"
+    image: "./images/hero_image0.jpg",
+    imageAlt: "Youth mountain bike riders in a race",
+    rotationIntervalMs: 7000,
+    images: [
+      {
+        src: "./images/hero_image0.jpg",
+        alt: "Youth mountain bike riders in a race"
+      },
+      {
+        src: "./images/hero_image1.jpg",
+        alt: "Youth female mountain bike rider in a race"
+      },
+      {
+        src: "./images/hero_image2.jpg",
+        alt: "Youth mountain bike rider in a race"
+      },
+    ]
   },
   about: {
     id: "about",
@@ -39,7 +54,7 @@ const siteContent = {
     ]
   },
   league: {
-    id: "league",
+    id: "leagueinfo",
     title: "League Information",
     intro:
       "Curious about what NICA is all about? Watch this short video below to find out more!"
