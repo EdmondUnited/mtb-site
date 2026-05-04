@@ -19,6 +19,12 @@ Static single-page React site for the Edmond United youth mountain bike team.
 
 `vite.config.js` is configured with:
 
-- `base: "/mtb-site/"`
+- `base: "/"`
 
-If the repository name changes, update `base` to match the new repo path.
+For a custom domain, keep `base: "/"`.
+
+Deploy configuration:
+
+- GitHub Pages source should be set to `GitHub Actions` (Settings -> Pages).
+- Workflow file: `.github/workflows/deploy.yml`
+- The workflow builds with Vite and deploys `dist/` (not the repo root source files).
