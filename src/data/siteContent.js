@@ -1,3 +1,6 @@
+const baseUrl = import.meta.env.BASE_URL;
+const imagePath = (fileName) => `${baseUrl}images/${fileName}`;
+
 const siteContent = {
   meta: {
     teamName: "Edmond United MTB Team",
@@ -15,8 +18,8 @@ const siteContent = {
   },
   nav: [
     { label: "About", href: "#about" },
+    { label: "League Info", href: "#leagueinfo" },
     { label: "Practices", href: "#practices" },
-    { label: "Join", href: "#join" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" }
   ],
@@ -26,8 +29,23 @@ const siteContent = {
       "A youth mountain bike team building confidence, skills, and community on every trail. A part of the Oklahoma Interscholastic Cycling League.",
     ctaLabel: "Join Our Team",
     ctaHref: "#contact",
-    image: "./images/hero_image.jpg",
-    imageAlt: "Youth mountain bike riders in a race"
+    image: imagePath("hero_image0.jpg"),
+    imageAlt: "Youth mountain bike riders in a race",
+    rotationIntervalMs: 7000,
+    images: [
+      {
+        src: imagePath("hero_image0.jpg"),
+        alt: "Youth mountain bike riders in a race"
+      },
+      {
+        src: imagePath("hero_image1.jpg"),
+        alt: "Youth female mountain bike rider in a race"
+      },
+      {
+        src: imagePath("hero_image2.jpg"),
+        alt: "Youth mountain bike rider in a race"
+      },
+    ]
   },
   about: {
     id: "about",
@@ -39,7 +57,7 @@ const siteContent = {
     ]
   },
   league: {
-    id: "league",
+    id: "leagueinfo",
     title: "League Information",
     intro:
       "Curious about what NICA is all about? Watch this short video below to find out more!"
@@ -85,35 +103,35 @@ const siteContent = {
         name: "Coach Graham",
         role: "Head Coach",
         type: "Volunteer Coach",
-        image: "/images/coach-graham.svg",
+        image: imagePath("coach-graham.svg"),
         imageAlt: "Portrait of Coach Graham"
       },
       {
         name: "Coach Matt",
         role: "Team Director",
         type: "Parent Coach",
-        image: "/images/coach-matt.svg",
+        image: imagePath("coach-matt.svg"),
         imageAlt: "Portrait of Coach Matt"
       },
       {
         name: "Coach Chad",
         role: "Team Director",
         type: "Parent Coach",
-        image: "/images/coach-chad.svg",
+        image: imagePath("coach-chad.svg"),
         imageAlt: "Portrait of Coach Chad"
       },
       {
         name: "Coach John",
         role: "Skills Coach",
         type: "Parent Coach",
-        image: "/images/coach-john.svg",
+        image: imagePath("coach-john.svg"),
         imageAlt: "Portrait of Coach John"
       },
       {
         name: "Coach Steph",
         role: "GRiT Coordinator/Coach",
         type: "Parent Coach",
-        image: "/images/coach-steph.svg",
+        image: imagePath("coach-steph.svg"),
         imageAlt: "Portrait of Coach Steph"
       }
     ]
