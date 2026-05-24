@@ -13,10 +13,10 @@ function LeagueInfoSection({ league }) {
         <iframe
           src="https://www.youtube-nocookie.com/embed/BNz8znDsm-0"
           title="What Is NICA? | West Virginia Battle at Big Bear | Race Coverage"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
       </div>
     </SectionShell>

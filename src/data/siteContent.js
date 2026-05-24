@@ -62,6 +62,38 @@ const siteContent = {
     intro:
       "Curious about what NICA is all about? Watch this short video below to find out more!"
   },
+  programs: {
+    id: "nicaprograms",
+    title: "NICA Programs",
+    intro:
+      "NICA offers multiple ways for student-athletes to grow on and off the bike. Explore each program below.",
+    items: [
+      {
+        slug: "nica-racing",
+        name: "NICA Racing",
+        shortMessage: "Race-focused training and events that build confidence and sportsmanship.",
+        src: "https://files.nationalmtb.org/hubfs/Regionals/Graphics/NICA-Racing-Logo.png"
+      },
+      {
+        slug: "grit",
+        name: "GRiT (Girls Riding Together)",
+        shortMessage: "A supportive community that empowers girls to ride, lead, and thrive.",
+        src: "https://files.nationalmtb.org/hubfs/Brand-Assets/NICA-National/Program-Logos/GriT/GRiT-Red.png"
+      },
+      {
+        slug: "ttc",
+        name: "TTC (Teen Trail Corp)",
+        shortMessage: "Trail stewardship opportunities where teens build and maintain local trails.",
+        src: "https://files.nationalmtb.org/hubfs/Brand-Assets/NICA-National/Program-Logos/Teen-Trail-Corps.png"
+      },
+      {
+        slug: "nica-adventure",
+        name: "NICA Adventure",
+        shortMessage: "Adventure rides that emphasize exploration, teamwork, and outdoor fun.",
+        src: "https://files.nationalmtb.org/hubfs/Brand-Assets/NICA-National/Program-Logos/Adventure.png"
+      }
+    ]
+  },
   practice: {
     id: "practices",
     title: "Team Practice",

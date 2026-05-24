@@ -1,0 +1,20 @@
+.page {
+  min-height: 100vh;
+  padding: var(--space-6) 0;
+}
+
+.page > div {
+  width: min(var(--max-width), 92%);
+  margin: 0 auto;
+}
+
+.backLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  text-decoration: underline;
+}
