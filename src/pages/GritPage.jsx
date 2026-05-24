@@ -1,20 +1,95 @@
 import styles from "./GritPage.module.css";
+import ButtonLink from "../components/ButtonLink";
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const storySections = [
+  {
+    title: "Riding Together at Practice",
+    text: "GRiT rides create space for girls to learn skills, try new things, and ride with confidence together.",
+    image: `${baseUrl}images/hero_image1.jpg`,
+    alt: "Girls riding together during team practice"
+  },
+  {
+    title: "Race Day Warmups and Encouragement",
+    text: "Before races, teammates encourage each other, settle nerves, and show up ready for the day as one group.",
+    image: `${baseUrl}images/hero_image0.jpg`,
+    alt: "Teammates warming up and encouraging each other on race day"
+  },
+  {
+    title: "GRiT Tent and Team Friendships",
+    text: "At the GRiT tent, girls connect, laugh, and build friendships that make weekends even more meaningful.",
+    image: `${baseUrl}images/hero_image2.jpg`,
+    alt: "Team friendship moment around the GRiT tent"
+  },
+  {
+    title: "Girls Supporting Girls",
+    text: "From start line to finish chute, girls cheer each other on and celebrate every effort, every finish, and every win.",
+    image: `${baseUrl}images/hero_image1.jpg`,
+    alt: "Girls cheering teammates during a race"
+  }
+];
 
 function GritPage() {
   return (
-    <>
-      <h1 className={styles.title}>GRiT (Girls Riding Together)</h1>
-      <p className={styles.intro}>
-        A supportive community that empowers girls to ride, lead, and thrive.
-      </p>
-      <section className={styles.placeholder}>
-        <h2>Page Coming Soon</h2>
+    <article className={styles.page}>
+      <header className={styles.hero}>
+        <img
+          src={`${baseUrl}images/hero_image1.jpg`}
+          alt="Girls riding together with Edmond United"
+        />
+        <div className={styles.heroOverlay}>
+          <p>Edmond United</p>
+          <h1>GRiT</h1>
+          <span>Girls Riding Together</span>
+        </div>
+      </header>
+
+      <section className={styles.introSection}>
+        <h2>Welcome to GRiT</h2>
         <p>
-          This is the placeholder page for GRiT. Add your custom layout and content
-          here.
+          GRiT helps girls build confidence, friendships, and a strong sense of
+          belonging through mountain biking in a team-first environment.
         </p>
       </section>
-    </>
+
+      <div className={styles.storyStack}>
+        {storySections.map((section, index) => (
+          <section key={section.title} className={styles.storySection}>
+            <div className={styles.storyText}>
+              <h2>{section.title}</h2>
+              <p>{section.text}</p>
+            </div>
+            <div className={styles.storyMedia}>
+              {index === 2 ? (
+                <div className={styles.collage}>
+                  <img src={section.image} alt={section.alt} />
+                  <img src={`${baseUrl}images/hero_image0.jpg`} alt="Girls sharing team moments together" />
+                </div>
+              ) : (
+                <img src={section.image} alt={section.alt} />
+              )}
+            </div>
+          </section>
+        ))}
+
+        <section className={styles.highlightSection}>
+          <h2>More than just riding</h2>
+          <p>
+            GRiT is about confidence, mentorship, friendship, and encouragement. It is
+            a welcoming space where girls can grow as riders and leaders together.
+          </p>
+        </section>
+
+        <section className={styles.ctaSection}>
+          <h2>Come ride with us</h2>
+          <div>
+            <ButtonLink href={`${baseUrl}#contact`}>Join Edmond United</ButtonLink>
+            <ButtonLink href="mailto:edmondok.nica@gmail.com">Ask a Question</ButtonLink>
+          </div>
+        </section>
+      </div>
+    </article>
   );
 }
 
