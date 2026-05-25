@@ -9,7 +9,7 @@ const storySections = [
     text: "GRiT rides create space for girls to learn skills, try new things, and ride with confidence together.",
     images: [
       {
-        src: `${baseUrl}images/hero_image1.jpg`,
+        src: `${baseUrl}images/gritPractice.webp`,
         alt: "Girls riding together during team practice"
       }
     ]
@@ -19,7 +19,15 @@ const storySections = [
     text: "Before races, teammates encourage each other, settle nerves, and show up ready for the day as one group.",
     images: [
       {
-        src: `${baseUrl}images/hero_image0.jpg`,
+        src: `${baseUrl}images/gritRaceday01.webp`,
+        alt: "Teammates warming up and encouraging each other on race day"
+      },
+      {
+        src: `${baseUrl}images/gritRaceday02.webp`,
+        alt: "Teammates warming up and encouraging each other on race day"
+      },
+      {
+        src: `${baseUrl}images/gritRaceday03.webp`,
         alt: "Teammates warming up and encouraging each other on race day"
       }
     ]
@@ -29,12 +37,8 @@ const storySections = [
     text: "At the GRiT tent, girls connect, laugh, and build friendships that make weekends even more meaningful.",
     images: [
       {
-        src: `${baseUrl}images/hero_image2.jpg`,
+        src: `${baseUrl}images/gritTent.webp`,
         alt: "Team friendship moment around the GRiT tent"
-      },
-      {
-        src: `${baseUrl}images/hero_image0.jpg`,
-        alt: "Girls sharing team moments together"
       }
     ]
   },
@@ -55,7 +59,7 @@ function GritPage() {
     <article className={styles.page}>
       <header className={styles.hero}>
         <img
-          src={`${baseUrl}images/hero_image1.jpg`}
+          src={`${baseUrl}images/heroGrit.webp`}
           alt="Girls riding together with Edmond United"
         />
         <div className={styles.heroOverlay}>
