@@ -8,12 +8,12 @@ import HeroSection from "./components/HeroSection";
 import PracticeInfoSection from "./components/PracticeInfoSection";
 import siteContent from "./data/siteContent";
 import LeagueInfoSection from "./components/LeagueInfoSection";
-import NicaProgramsSection from "./components/NicaProgramsSection";
-import NicaRacingPage from "./pages/NicaRacingPage";
-import GritPage from "./pages/GritPage";
-import TtcPage from "./pages/TtcPage";
-import NicaAdventurePage from "./pages/NicaAdventurePage";
-import ProgramLayout from "./pages/ProgramLayout";
+import NicaProgramsSection from "./components/NicaProgramsSection/";
+import RacingPage from "./pages/RacingPage/RacingPage";
+import GritPage from "./pages/GritPage/GritPage";
+import TtcPage from "./pages/TtcPage/TtcPage";
+import AdventurePage from "./pages/AdventurePage/AdventurePage";
+import ProgramLayout from "./pages/ProgramLayout/ProgramLayout";
 
 function HomePage() {
   return (
@@ -59,10 +59,10 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/programs" element={<ProgramLayout />}>
-        <Route path="nica-racing" element={<NicaRacingPage />} />
+        <Route path="nica-racing" element={<RacingPage />} />
         <Route path="grit" element={<GritPage />} />
         <Route path="ttc" element={<TtcPage />} />
-        <Route path="nica-adventure" element={<NicaAdventurePage />} />
+        <Route path="nica-adventure" element={<AdventurePage />} />
         <Route path="*" element={<ProgramNotFoundPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />

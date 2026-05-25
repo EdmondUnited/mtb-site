@@ -1,5 +1,5 @@
 import styles from "./TtcPage.module.css";
-import ButtonLink from "../components/ButtonLink";
+import ButtonLink from "../../components/ButtonLink";
 
 const baseUrl = import.meta.env.BASE_URL;
 
@@ -7,26 +7,46 @@ const storySections = [
   {
     title: "Giving Back to Local Trails",
     text: "Teen Trail Corps riders show up with tools and teamwork to care for the local trails our community rides every week.",
-    image: `${baseUrl}images/hero_image0.jpg`,
-    alt: "Edmond United riders participating in local trail work"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image0.jpg`,
+        alt: "Edmond United riders participating in local trail work"
+      }
+    ]
   },
   {
     title: "Learning Trail Stewardship",
     text: "Athletes learn why trail care matters, how to protect riding spaces, and what it means to leave trails better than we found them.",
-    image: `${baseUrl}images/hero_image2.jpg`,
-    alt: "Student-athletes learning trail stewardship outdoors"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image2.jpg`,
+        alt: "Student-athletes learning trail stewardship outdoors"
+      },
+      {
+        src: `${baseUrl}images/hero_image1.jpg`,
+        alt: "Team outdoor stewardship collage"
+      }
+    ]
   },
   {
     title: "Working Alongside OMBA",
     text: "By volunteering with OMBA, riders see how local trail systems are maintained and how service keeps the MTB community strong.",
-    image: `${baseUrl}images/hero_image1.jpg`,
-    alt: "Teen Trail Corps athletes supporting OMBA trail efforts"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image1.jpg`,
+        alt: "Teen Trail Corps athletes supporting OMBA trail efforts"
+      }
+    ]
   },
   {
     title: "Building Leaders On and Off the Bike",
     text: "TTC develops responsibility, leadership, and pride in helping others enjoy safe, sustainable trails.",
-    image: `${baseUrl}images/hero_image0.jpg`,
-    alt: "Edmond United youth riders leading through service"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image0.jpg`,
+        alt: "Edmond United youth riders leading through service"
+      }
+    ]
   }
 ];
 
@@ -62,13 +82,14 @@ function TtcPage() {
               <p>{section.text}</p>
             </div>
             <div className={styles.storyMedia}>
-              {index === 1 ? (
+              {section.images.length > 1 ? (
                 <div className={styles.collage}>
-                  <img src={section.image} alt={section.alt} />
-                  <img src={`${baseUrl}images/hero_image1.jpg`} alt="Team outdoor stewardship collage" />
+                  {section.images.map((image) => (
+                    <img key={image.src} src={image.src} alt={image.alt} />
+                  ))}
                 </div>
               ) : (
-                <img src={section.image} alt={section.alt} />
+                <img src={section.images[0].src} alt={section.images[0].alt} />
               )}
             </div>
           </section>

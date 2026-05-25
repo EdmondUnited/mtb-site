@@ -1,5 +1,5 @@
-import styles from "./NicaAdventurePage.module.css";
-import ButtonLink from "../components/ButtonLink";
+import styles from "./AdventurePage.module.css";
+import ButtonLink from "../../components/ButtonLink";
 
 const baseUrl = import.meta.env.BASE_URL;
 
@@ -7,20 +7,36 @@ const storySections = [
   {
     title: "Exploring New Trails",
     text: "NICA Adventure rides invite athletes to discover new terrain, fresh views, and the joy of exploring on two wheels.",
-    image: `${baseUrl}images/hero_image0.jpg`,
-    alt: "Edmond United riders exploring outdoor trails together"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image0.jpg`,
+        alt: "Edmond United riders exploring outdoor trails together"
+      }
+    ]
   },
   {
     title: "Building Confidence and Skills",
     text: "Each ride helps athletes grow technical skills, decision-making, and confidence in changing trail conditions.",
-    image: `${baseUrl}images/hero_image2.jpg`,
-    alt: "Youth mountain biker developing skills on trail"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image2.jpg`,
+        alt: "Youth mountain biker developing skills on trail"
+      }
+    ]
   },
   {
     title: "Adventure with Teammates",
     text: "From group rides to trail stops, teammates encourage each other and build friendships through shared adventure.",
-    image: `${baseUrl}images/hero_image1.jpg`,
-    alt: "Team riders sharing an outdoor adventure moment"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image1.jpg`,
+        alt: "Team riders sharing an outdoor adventure moment"
+      },
+      {
+        src: `${baseUrl}images/hero_image0.jpg`,
+        alt: "Adventure trail collage with Edmond United riders"
+      }
+    ]
   }
 ];
 
@@ -56,13 +72,14 @@ function NicaAdventurePage() {
               <p>{section.text}</p>
             </div>
             <div className={styles.storyMedia}>
-              {index === 2 ? (
+              {section.images.length > 1 ? (
                 <div className={styles.collage}>
-                  <img src={section.image} alt={section.alt} />
-                  <img src={`${baseUrl}images/hero_image0.jpg`} alt="Adventure trail collage with Edmond United riders" />
+                  {section.images.map((image) => (
+                    <img key={image.src} src={image.src} alt={image.alt} />
+                  ))}
                 </div>
               ) : (
-                <img src={section.image} alt={section.alt} />
+                <img src={section.images[0].src} alt={section.images[0].alt} />
               )}
             </div>
           </section>

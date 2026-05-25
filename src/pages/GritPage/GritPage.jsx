@@ -1,5 +1,5 @@
 import styles from "./GritPage.module.css";
-import ButtonLink from "../components/ButtonLink";
+import ButtonLink from "../../components/ButtonLink";
 
 const baseUrl = import.meta.env.BASE_URL;
 
@@ -7,26 +7,46 @@ const storySections = [
   {
     title: "Riding Together at Practice",
     text: "GRiT rides create space for girls to learn skills, try new things, and ride with confidence together.",
-    image: `${baseUrl}images/hero_image1.jpg`,
-    alt: "Girls riding together during team practice"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image1.jpg`,
+        alt: "Girls riding together during team practice"
+      }
+    ]
   },
   {
     title: "Race Day Warmups and Encouragement",
     text: "Before races, teammates encourage each other, settle nerves, and show up ready for the day as one group.",
-    image: `${baseUrl}images/hero_image0.jpg`,
-    alt: "Teammates warming up and encouraging each other on race day"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image0.jpg`,
+        alt: "Teammates warming up and encouraging each other on race day"
+      }
+    ]
   },
   {
     title: "GRiT Tent and Team Friendships",
     text: "At the GRiT tent, girls connect, laugh, and build friendships that make weekends even more meaningful.",
-    image: `${baseUrl}images/hero_image2.jpg`,
-    alt: "Team friendship moment around the GRiT tent"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image2.jpg`,
+        alt: "Team friendship moment around the GRiT tent"
+      },
+      {
+        src: `${baseUrl}images/hero_image0.jpg`,
+        alt: "Girls sharing team moments together"
+      }
+    ]
   },
   {
     title: "Girls Supporting Girls",
     text: "From start line to finish chute, girls cheer each other on and celebrate every effort, every finish, and every win.",
-    image: `${baseUrl}images/hero_image1.jpg`,
-    alt: "Girls cheering teammates during a race"
+    images: [
+      {
+        src: `${baseUrl}images/hero_image1.jpg`,
+        alt: "Girls cheering teammates during a race"
+      }
+    ]
   }
 ];
 
@@ -61,13 +81,14 @@ function GritPage() {
               <p>{section.text}</p>
             </div>
             <div className={styles.storyMedia}>
-              {index === 2 ? (
+              {section.images.length > 1 ? (
                 <div className={styles.collage}>
-                  <img src={section.image} alt={section.alt} />
-                  <img src={`${baseUrl}images/hero_image0.jpg`} alt="Girls sharing team moments together" />
+                  {section.images.map((image) => (
+                    <img key={image.src} src={image.src} alt={image.alt} />
+                  ))}
                 </div>
               ) : (
-                <img src={section.image} alt={section.alt} />
+                <img src={section.images[0].src} alt={section.images[0].alt} />
               )}
             </div>
           </section>
