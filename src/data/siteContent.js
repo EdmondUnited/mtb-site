@@ -8,7 +8,7 @@ const siteContent = {
     pageTitle: "Edmond United Youth Mountain Bike Team"
   },
   theme: {
-    primary: "#497a56",
+    primary: "#213c21",
     accentRed: "#d33a2b",
     accentBlue: "#2f4f94",
     accentGold: "#edad42",

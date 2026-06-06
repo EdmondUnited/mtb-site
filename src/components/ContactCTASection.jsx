@@ -13,7 +13,7 @@ function ContactCTASection({ contact }) {
     >
       <div>
         <ButtonLink href={contact.ctaHref}>{contact.ctaLabel}</ButtonLink>
-        <p>{contact.supportText}</p>
+        <a href="https://www.oklahomamtb.org" target="_blank">{contact.supportText}</a>
       </div>
     </SectionShell>
   );
